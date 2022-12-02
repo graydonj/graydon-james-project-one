@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+header {
+    background-color: $white;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .header-img-container {
+        width: 45%;
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    .header-content {
+        width: 55%;
+        color: $black;
+
+        .content-container {
+            margin: 0 auto;
+            width: 65%;
+        }
+    }
+}

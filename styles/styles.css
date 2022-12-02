@@ -227,17 +227,403 @@ html {
   overflow: hidden;
 }
 
-h1 {
-  font-family: Montserrat, sans-serif;
-  font-weight: bold;
-}
-
-h2 {
-  font-family: Montserrat, sans-serif;
-  font-weight: normal;
+html {
+  /* if we set our root element font-size to 125%, then 1 rem = 20px */
+  font-size: 125%;
 }
 
 body {
   font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  font-family: Montserrat, sans-serif;
   font-weight: normal;
+  color: #333333;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 2.7rem;
+  line-height: 3rem;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin-bottom: 18px;
+}
+
+h5 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+}
+
+p {
+  line-height: 1.5rem;
+  margin: 0 0 30px 0;
+}
+p.small-copy {
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+ul,
+li,
+a,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  color: #333333;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #333333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* style the button in the main nav menu to look just like an icon */
+}
+button:hover, button:focus {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+button.secondary {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px 12px;
+}
+button.secondary:hover, button.secondary:focus {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+button.solid {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+button.solid:hover {
+  color: #333333;
+  background-color: #FFFFFF;
+}
+button.menu-icon {
+  display: inherit;
+  padding: 0;
+  border: none;
+}
+button.menu-icon:hover, button.menu-icon:focus {
+  background-color: transparent;
+}
+
+a.button {
+  color: #333333;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #333333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a.button:hover, a.button:focus {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+.nav-bar .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+.nav-bar .search-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav-bar .search-cart .search-icon,
+.nav-bar .search-cart .bag {
+  margin-right: 15px;
+}
+.nav-bar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav-bar .logo {
+  margin-left: 60px;
+}
+.nav-bar .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav-bar .counter p {
+  width: 24px;
+  height: 24px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.slide-out-nav {
+  padding: 35px 50px;
+  border-right: 1px solid #333333;
+  width: 100%;
+  max-width: 506px;
+  height: 100vh;
+  background-color: #333333;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -506px;
+  z-index: 20;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+.slide-out-nav .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slide-out-nav .button-container button {
+  padding: 10px 0 10px 20px;
+}
+.slide-out-nav .main-menu a {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: white;
+}
+.slide-out-nav .main-menu a:hover, .slide-out-nav .main-menu a:focus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header {
+  background-color: #FFFFFF;
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .header-img-container {
+  width: 45%;
+}
+header .header-img-container img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+header .header-content {
+  width: 55%;
+  color: #333333;
+}
+header .header-content .content-container {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.category-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+.category-gallery .items {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  padding: 45px;
+  margin: 50px 25px 25px;
+  border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.category-gallery .items img {
+  max-width: 100%;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+.category-gallery .items:hover, .category-gallery .items:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.play {
+  background-image: url(../assets/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+.play .play-container {
+  max-width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 45px;
+  border: 24px solid #F6F6F6;
+  background-color: #FFFFFF;
+}
+
+footer {
+  background-color: #C3DAB7;
+  color: #FFFFFF;
+  padding: 90px 0 50px 0;
+}
+footer .footer-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footer-flex-container h4 {
+  color: #FFFFFF;
+}
+footer .footer-nav {
+  width: 40%;
+}
+footer .footer-nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer-nav nav ul {
+  width: 33%;
+}
+footer .footer-nav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footer-nav nav a:hover, footer .footer-nav nav a:focus {
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+}
+@media (max-width: 800px) {
+  /* all of our styles for TABLET devices will go within this breakpoint */
+}
+@media (max-width: 500px) {
+  /* all of our styles for MOBILE devices will go within this breakpoint */
 }
