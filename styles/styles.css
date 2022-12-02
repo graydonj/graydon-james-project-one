@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap';
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -224,4 +225,19 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+h1 {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
 }

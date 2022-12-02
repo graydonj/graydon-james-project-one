@@ -1,0 +1,15 @@
+// Define the variables we'll be using:
+// Website Colours
+$light-sage: #C3DAB7;
+$white: #FFFFFF;
+$white-two: #F6F6F6;
+$black: #333333;
+
+// Bring in Google Fonts
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap';
+
+// Website Fonts
+$header-font: Montserrat, sans-serif;
+$button-font: Montserrat, sans-serif;
+$nav-font: Montserrat, sans-serif;
+$body-font: Open Sans, sans-serif;
