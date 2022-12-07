@@ -1,5 +1,21 @@
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+
+    /* Re-orient the Nav elements into columns on either side of logo/title */
+    .nav-bar {
+
+        .nav-menu {
+            flex-direction: column;
+
+            a {
+                    margin: 5px auto;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    }
 }
 
 @media (max-width: 800px) {

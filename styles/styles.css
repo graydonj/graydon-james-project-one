@@ -370,7 +370,6 @@ a.button:hover, a.button:focus {
   top: 0;
   z-index: 10;
   background-color: #FFFFFF;
-  /* border: 1px solid black; */
 }
 .nav-bar .wrapper {
   display: -webkit-box;
@@ -394,13 +393,33 @@ a.button:hover, a.button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* border: 2px dotted green; */
 }
 .nav-bar .nav-menu a,
 .nav-bar .nav-menu h1,
 .nav-bar .nav-menu-center a,
 .nav-bar .nav-menu-center h1 {
   margin: 0 auto;
+}
+.nav-bar .nav-menu a,
+.nav-bar .nav-menu-center a {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  -webkit-transition: -webkit-text-decoration-color 0.5s ease;
+  transition: -webkit-text-decoration-color 0.5s ease;
+  transition: text-decoration-color 0.5s ease;
+  transition: text-decoration-color 0.5s ease, -webkit-text-decoration-color 0.5s ease;
+}
+.nav-bar .nav-menu a:hover,
+.nav-bar .nav-menu a:focus,
+.nav-bar .nav-menu-center a:hover,
+.nav-bar .nav-menu-center a:focus {
+  -webkit-text-decoration-color: #333333;
+          text-decoration-color: #333333;
+}
+.nav-bar .nav-menu .logo,
+.nav-bar .nav-menu-center .logo {
+  text-decoration: none;
 }
 .nav-bar .nav-menu {
   -ms-flex-preferred-size: 25%;
@@ -416,7 +435,6 @@ a.button:hover, a.button:focus {
   font-family: Montserrat, sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
-  /* border: 2px solid blue; */
 }
 .nav-bar button {
   padding: 0;
@@ -600,8 +618,21 @@ footer .footer-nav nav a:hover, footer .footer-nav nav a:focus {
   color: white;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  /* Re-orient the Nav elements into columns on either side of logo/title */
+  .nav-bar .nav-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-bar .nav-menu a {
+    margin: 5px auto;
+  }
+  .nav-bar button {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
