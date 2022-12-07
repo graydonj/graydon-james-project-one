@@ -3,10 +3,13 @@
 @use "variables" as *;
 
 .nav-bar {
+
+    /* keep Nav Bar at the top of the screen */
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: $white;
+    /* border: 1px solid black; */
 
     .wrapper {
         display: flex;
@@ -14,74 +17,69 @@
         padding: 20px 0;
     }
 
-    .search-cart {
+    .nav-menu,
+    .nav-menu-center {
+        flex-basis: 30%;
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border: 2px dotted green; */
 
-        .search-icon,
-        .bag {
-            margin-right: 15px;
+        a,
+        h1 {
+            margin: 0 auto;
         }
     }
 
-    a {
-        display: flex;
+    .nav-menu {
+        flex-basis: 25%;
     }
 
-    .logo {
-        margin-left: 60px;
+    .nav-menu-center {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+    
+
+    .menu-icon {
+        font-family: $nav-font;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        /* border: 2px solid blue; */
+    }
+
+    button {
+        padding: 0;
+        margin: 0 10px;
+    }
+
+    .icon {
+        font-size: 1rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .search-cart {
+        display: flex;
     }
 
     .counter {
         display: flex;
         align-items: center;
+        width: 100%;
+        height: auto;
 
         p {
-            width: 24px;
-            height: 24px;
-            background-color: $black;
-            color: $white;
+            width: 20px;
+            height: 20px;
+            font-size: 0.6rem;
+            background-color: $light-sage;
+            color: $black;
             text-align: center;
             border-radius: 50%;
-        }
-    }
-}
-
-.slide-out-nav {
-    padding: 35px 50px;
-    border-right: 1px solid $black;
-    width: 100%;
-    max-width: 506px;
-    height: 100vh;
-    background-color: $black;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: -506px;
-    z-index: 20;
-    transition: 0.75s;
-
-    .button-container {
-        display: flex;
-        justify-content: flex-end;
-
-        button {
-            padding: 10px 0 10px 20px;
-        }
-    }
-
-    .main-menu {
-        a {
-            font-family: $nav-font;
-            font-size: 1.6rem;
-            line-height: 2.5rem;
-            color: rgba($color: $white, $alpha: 1);
-
-            &:hover,
-            &:focus {
-                color: rgba($color: $white, $alpha: 0.5);
-            }
+            position: relative;
+            bottom: -8px;
+            right: 10px;
         }
     }
 }

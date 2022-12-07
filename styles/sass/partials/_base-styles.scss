@@ -23,7 +23,7 @@ blockquote {
 }
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -110,31 +110,8 @@ button {
         color: $white;
     }
 
-    &.secondary {
-        background-color: transparent;
-        border-color: $white;
-        color: $white;
-        padding: 8px 12px;
-
-        &:hover,
-        &:focus {
-            background-color: $white;
-            color: $black;
-        }
-    }
-
-    &.solid {
-        color: $white;
-        background-color: $black;
-
-        &:hover {
-            color: $black;
-            background-color: $white;
-        }
-    }
-
     /* style the button in the main nav menu to look just like an icon */
-    &.menu-icon {
+    &.search-icon {
         display: inherit;
         padding: 0;
         border: none;
@@ -142,6 +119,7 @@ button {
         &:hover,
         &:focus {
             background-color: transparent;
+            color: $black;
         }
     }
 }

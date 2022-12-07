@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Font Awesome kit/icons -->
+	<script src="https://kit.fontawesome.com/734162beef.js" crossorigin="anonymous"></script>
+
 	<!-- Link our stylesheet -->
 	<link rel="stylesheet" href="./styles/styles.css">
 
@@ -16,41 +19,50 @@
 	<!-- Navigation bar -->
 	<nav class="nav-bar">
 		<div class="wrapper">
-			<button class="menu-icon">
-				<img src="./assets/menu-button.svg" alt="open slide-out navigation">
-			</button>
-			<a href="#" class="logo">
-				<h1>Creative</h1>
-			</a>
-			<div class="search-cart">
-				<button class="menu-icon">
-					<img src="./assets/search.svg" alt="search icon" class="search-icon">
-				</button>
-				<a href="#" class="bag">
-					<img src="./assets/shop-bag.svg" alt="shopping bag icon" class="bagIcon">
+
+			<!-- Nav bar elements *before* website logo/title -->
+			<div class="nav-menu">
+				<a href="#home" class="menu-icon">
+					Home
 				</a>
-				<div class="counter">
-					<p class="small-copy">0</p>
-				</div>
-			</div> <!-- .search-cart end -->
+				<a href="#" class="menu-icon">
+					Blog
+				</a>
+				<a href="#" class="menu-icon">
+					Portfolio
+				</a>
+			</div> <!-- .nav-menu end -->
+
+			<!-- Website Title/Logo -->
+			<div class="nav-menu-center">
+				<a href="#home" class="logo">
+					<h1>Creative</h1>
+				</a>
+			</div> <!-- .nav-menu end -->
+
+			<!-- Nav bar elements *after* website logo/title -->
+			<div class="nav-menu">
+				<a href="#" class="menu-icon">
+					Shop
+				</a>
+				<a href="#" class="menu-icon">
+					Contact
+				</a>
+
+				<!-- Search Icon and shopping bag w/counter -->
+				<div class="search-cart menu-icon">
+					<button class="icon search-icon">
+						<i class="fa-solid fa-magnifying-glass" aria-hidden="true" title="Search"></i><span class="fa-sr-only fa-sr-only-focusable">Search Icon</span>
+					</button>
+					<a href="#" class="icon bag-icon">
+						<i class="fa-solid fa-bag-shopping" aria-hidden="true" title="Shopping Bag"></i><span class="fa-sr-only fa-sr-only-focusable">Shopping Bag</span>
+					</a>
+					<div class="counter">
+						<p class="small-copy">2</p>
+					</div>
+				</div> <!-- .search-cart & menu-icon end -->
+			</div> <!-- .nav-menu end -->
 		</div> <!-- .wrapper end -->
-	
-		<div class="slide-out-nav">
-			<div class="button-container">
-				<button>
-					<img src="./assets/menu-close.svg" alt="close navigation">
-				</button>
-			</div>
-			<nav>
-				<ul class="main-menu">
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</div> <!-- .slide-out-nav end -->
 	</nav> <!-- nav end -->
 
 </body>

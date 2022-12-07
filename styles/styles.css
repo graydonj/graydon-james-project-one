@@ -250,7 +250,7 @@ blockquote {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -337,31 +337,14 @@ button:hover, button:focus {
   background-color: #333333;
   color: #FFFFFF;
 }
-button.secondary {
-  background-color: transparent;
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  padding: 8px 12px;
-}
-button.secondary:hover, button.secondary:focus {
-  background-color: #FFFFFF;
-  color: #333333;
-}
-button.solid {
-  color: #FFFFFF;
-  background-color: #333333;
-}
-button.solid:hover {
-  color: #333333;
-  background-color: #FFFFFF;
-}
-button.menu-icon {
+button.search-icon {
   display: inherit;
   padding: 0;
   border: none;
 }
-button.menu-icon:hover, button.menu-icon:focus {
+button.search-icon:hover, button.search-icon:focus {
   background-color: transparent;
+  color: #333333;
 }
 
 a.button {
@@ -382,10 +365,12 @@ a.button:hover, a.button:focus {
 }
 
 .nav-bar {
+  /* keep Nav Bar at the top of the screen */
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: #FFFFFF;
+  /* border: 1px solid black; */
 }
 .nav-bar .wrapper {
   display: -webkit-box;
@@ -396,22 +381,56 @@ a.button:hover, a.button:focus {
           justify-content: space-between;
   padding: 20px 0;
 }
+.nav-bar .nav-menu,
+.nav-bar .nav-menu-center {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* border: 2px dotted green; */
+}
+.nav-bar .nav-menu a,
+.nav-bar .nav-menu h1,
+.nav-bar .nav-menu-center a,
+.nav-bar .nav-menu-center h1 {
+  margin: 0 auto;
+}
+.nav-bar .nav-menu {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+.nav-bar .nav-menu-center {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.nav-bar .menu-icon {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  /* border: 2px solid blue; */
+}
+.nav-bar button {
+  padding: 0;
+  margin: 0 10px;
+}
+.nav-bar .icon {
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .nav-bar .search-cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.nav-bar .search-cart .search-icon,
-.nav-bar .search-cart .bag {
-  margin-right: 15px;
-}
-.nav-bar a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.nav-bar .logo {
-  margin-left: 60px;
 }
 .nav-bar .counter {
   display: -webkit-box;
@@ -420,57 +439,20 @@ a.button:hover, a.button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: auto;
 }
 .nav-bar .counter p {
-  width: 24px;
-  height: 24px;
-  background-color: #333333;
-  color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  font-size: 0.6rem;
+  background-color: #C3DAB7;
+  color: #333333;
   text-align: center;
   border-radius: 50%;
-}
-
-.slide-out-nav {
-  padding: 35px 50px;
-  border-right: 1px solid #333333;
-  width: 100%;
-  max-width: 506px;
-  height: 100vh;
-  background-color: #333333;
-  color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: -506px;
-  z-index: 20;
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
-}
-.slide-out-nav .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.slide-out-nav .button-container button {
-  padding: 10px 0 10px 20px;
-}
-.slide-out-nav .main-menu a {
-  font-family: Montserrat, sans-serif;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  color: white;
-}
-.slide-out-nav .main-menu a:hover, .slide-out-nav .main-menu a:focus {
-  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  bottom: -8px;
+  right: 10px;
 }
 
 header {
