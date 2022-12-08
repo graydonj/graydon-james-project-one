@@ -274,17 +274,16 @@ h4 {
 }
 
 h5 {
-  font-size: 0.7rem;
-  font-weight: bold;
+  font-size: 0.85rem;
   line-height: 1.2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
   margin: 0 0 24px 0;
 }
 
 p {
-  line-height: 1.5rem;
-  margin: 0 0 30px 0;
+  line-height: 1rem;
+  margin: 0;
 }
 p.small-copy {
   font-size: 0.6rem;
@@ -365,12 +364,12 @@ a.button:hover, a.button:focus {
 }
 
 .nav-bar {
-  /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.3 */
+  /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.1 */
   position: sticky;
   top: 0;
   z-index: 10;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url(../assets/home-1.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/home-1.jpeg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url(../assets/home-1.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/home-1.jpeg);
   background-attachment: fixed;
   background-position: auto, center top;
 }
@@ -477,7 +476,7 @@ a.button:hover, a.button:focus {
 }
 
 header .header-img {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -566,42 +565,97 @@ header .header-img {
 }
 
 footer {
-  background-color: #C3DAB7;
-  color: #FFFFFF;
-  padding: 90px 0 50px 0;
+  background-color: #333333;
+  color: #F6F6F6;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  padding: 120px 0;
+  /* shared properties of all h5 in the footer */
+  /* shared properties of all paragraphs in the footer */
+  /* set up flexbox */
 }
-footer .footer-flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 90px;
+footer h5 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #F6F6F6;
+  margin-bottom: 40px;
 }
-footer .footer-flex-container h4 {
-  color: #FFFFFF;
+footer p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 0.6rem;
+  color: #F6F6F6;
+  letter-spacing: 0.05rem;
 }
 footer .footer-nav {
-  width: 40%;
-}
-footer .footer-nav nav {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /* each element of footer takes up 1/3 of the space */
+  /* in the Contact Us section, keep the a href (on the mailto:) the same as the rest of the text */
+  /* middle section of footer, so we align it to look "centered" */
+  /* right-side section of footer so we align it to the right */
+  /* email input field styling; place the "arrow" button relative to the input field */
+  /* common styles for all anchor tags */
 }
-footer .footer-nav nav ul {
-  width: 33%;
+footer .footer-nav .footer-box {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
-footer .footer-nav nav a {
-  color: rgba(255, 255, 255, 0.5);
+footer .footer-nav .social-media {
+  margin-top: 30px;
+  /* styling only for social media icons */
+}
+footer .footer-nav .social-media i {
+  padding-right: 15px;
+  color: rgba(246, 246, 246, 0.8);
   font-size: 0.8rem;
-  line-height: 1.5rem;
 }
-footer .footer-nav nav a:hover, footer .footer-nav nav a:focus {
+footer .footer-nav .footer-contact a {
+  color: #F6F6F6;
+}
+footer .footer-nav .footer-blog h5 {
+  text-align: center;
+}
+footer .footer-nav .footer-blog li:nth-child(n+2) {
+  list-style: inside;
+  padding-left: 13%;
+}
+footer .footer-nav .footer-twitter h5,
+footer .footer-nav .footer-twitter p {
+  text-align: right;
+}
+footer .footer-nav .footer-twitter p {
+  position: relative;
+}
+footer .footer-nav input {
+  width: 65%;
+  margin: 30px 0;
+  padding: 10px;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.6rem;
+  color: rgba(51, 51, 51, 0.8);
+}
+footer .footer-nav button {
+  padding: 6px 15px;
+  background-color: #C3DAB7;
+  position: absolute;
+  bottom: 32px;
+  right: 0px;
+  border: none;
+}
+footer .footer-nav a {
+  color: rgba(246, 246, 246, 0.8);
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+footer .footer-nav a:hover, footer .footer-nav a:focus {
   color: white;
 }
 
