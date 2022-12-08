@@ -365,11 +365,14 @@ a.button:hover, a.button:focus {
 }
 
 .nav-bar {
-  /* keep Nav Bar at the top of the screen */
+  /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.3 */
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #F6F6F6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url(../assets/home-1.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/home-1.jpeg);
+  background-attachment: fixed;
+  background-position: auto, center top;
 }
 .nav-bar .wrapper {
   display: -webkit-box;
@@ -474,22 +477,15 @@ a.button:hover, a.button:focus {
 }
 
 header .header-img {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-header .header-img img {
+  height: 100vh;
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding: 0;
+  margin: 0;
+  background-color: #F6F6F6; /* just in case the image won't load */
+  background-image: url(../assets/home-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 .category-gallery {

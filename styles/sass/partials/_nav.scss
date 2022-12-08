@@ -4,11 +4,13 @@
 
 .nav-bar {
 
-    /* keep Nav Bar at the top of the screen */
+    /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.3 */
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: $white-two;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/home-1.jpeg);
+    background-attachment: fixed;
+    background-position: auto, center top;
 
     .wrapper {
         display: flex;
