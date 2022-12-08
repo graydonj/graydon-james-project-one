@@ -369,7 +369,7 @@ a.button:hover, a.button:focus {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #FFFFFF;
+  background-color: #F6F6F6;
 }
 .nav-bar .wrapper {
   display: -webkit-box;
@@ -473,32 +473,23 @@ a.button:hover, a.button:focus {
   right: 10px;
 }
 
-header {
-  background-color: #FFFFFF;
-  margin-bottom: 90px;
+header .header-img {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-header .header-img-container {
-  width: 45%;
-}
-header .header-img-container img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-header .header-content {
-  width: 55%;
-  color: #333333;
-}
-header .header-content .content-container {
-  margin: 0 auto;
-  width: 65%;
+header .header-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .category-gallery {
