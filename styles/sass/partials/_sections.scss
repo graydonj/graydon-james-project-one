@@ -98,3 +98,77 @@
         }
     }
 }
+
+.comment-wrapper {
+    display: flex;
+    align-items: top;
+    margin-bottom: 20px;
+
+    .comment-text {
+        width: 100%;
+        background-color: $white-two;
+        margin-left: 20px;
+        padding: 5px 20px;
+
+        a {
+            font-style: italic;
+            font-size: 0.8rem;
+            color:rgba($color: $black, $alpha: 0.6);
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    h4 {
+        display: inline;
+    }
+}
+
+.comment-box {
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+
+        .form-box {
+            flex-basis: 30%;
+        }
+    }
+
+    input[type=text] {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        color: rgba($color: $black, $alpha: 0.5);
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+
+        &:focus {
+            color: $black;
+            border-bottom: 1px solid $black;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        resize: none;
+        color: rgba($color: $black, $alpha: 0.5);
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+
+        &:focus {
+            color: $black;
+            border-bottom: 1px solid $black;
+        }
+    }
+
+    button {
+        margin-bottom: 150px;
+    }
+}
