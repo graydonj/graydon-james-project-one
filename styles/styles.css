@@ -643,10 +643,10 @@ footer .footer-nav input {
   color: rgba(51, 51, 51, 0.8);
 }
 footer .footer-nav button {
-  padding: 6px 15px;
+  padding: 8px 15px 7px 15px;
   background-color: #C3DAB7;
   position: absolute;
-  bottom: 32px;
+  bottom: 30px;
   right: 0px;
   border: none;
 }
@@ -680,4 +680,25 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+  /* Flex the footer elements in a column, align their headers and content to match */
+  footer .footer-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-nav .footer-box {
+    margin-bottom: 30px;
+  }
+  footer .footer-nav .footer-box h5 {
+    text-align: center;
+  }
+  footer .footer-nav .footer-box p,
+footer .footer-nav .footer-box .social-media {
+    text-align: left;
+    padding-left: 13%;
+  }
+  footer .footer-nav .footer-box button {
+    right: 100px;
+  }
 }

@@ -24,4 +24,29 @@
 
 @media (max-width: 500px) {
     /* all of our styles for MOBILE devices will go within this breakpoint */
+
+    /* Flex the footer elements in a column, align their headers and content to match */
+    footer {
+        .footer-nav {
+            flex-direction: column;
+
+            .footer-box {
+                margin-bottom: 30px;
+
+                h5 {
+                    text-align: center;
+                }
+
+                p,
+                .social-media {
+                    text-align: left;
+                    padding-left: 13%;
+                }
+
+                button {
+                    right: 100px;
+                }
+            }
+        }
+    }
 }
