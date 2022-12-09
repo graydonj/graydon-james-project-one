@@ -2,6 +2,7 @@
 
 header {
 
+    // Main page header image
     .header-img {
         height: 120vh;
         width: 100%;
@@ -16,11 +17,13 @@ header {
         
     }
 
+    // Update styles above for the blog page header
     .header-img-blog {
         height: 100vh;
         background-image: url(../assets/blog-1.jpeg);
     }
 
+    // Update styles above for the contact page header
     .header-img-contact {
         height: 24vh;
         background-image: url(../assets/contact-1.jpeg);

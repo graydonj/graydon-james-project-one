@@ -1,6 +1,5 @@
 @use "variables" as *;
 
-
 // Styling for BLOG page (blog.html)
 .blog {
     p {
@@ -9,6 +8,7 @@
         margin-bottom: 20px;
         color: rgba($color: $black, $alpha: 0.6);
 
+        // We have a few bits of text that are highlighted in some way
         .highlighted {
             color: $black;
         }
@@ -18,12 +18,14 @@
         }
     }
 
+    // Section headings for the blog page
     h3 {
         padding-bottom: 10px;
         margin-bottom: 40px;
         border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
     }
 
+    // Styling for social media icons in the "Share" section after the blog post
     .share {
         margin-bottom: 80px;
 
@@ -38,6 +40,7 @@
     }
 }
 
+// Blog post styling; we make a flexbox to show the blog info (author, date, tags, &c.)
 .blog-post-header {
     margin-top: 60px;
     padding-bottom: 30px;
@@ -46,6 +49,7 @@
     align-items: center;
     border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
 
+    // .blog-author and .blog-info are the two boxes showing the blog author's image/name and the blog posts tags, details, &c.
     .blog-author,
     .blog-info {
         flex-basis: 50%;
@@ -74,6 +78,7 @@
     margin-top: 60px;
 }
 
+// The gallery elements in the blog post (ie. "Related Posts" section)
 .blog-gallery {
     display: flex;
     justify-content: space-between;
@@ -81,6 +86,7 @@
     flex-wrap: wrap;
     width: 100%;
 
+    // Flexbox the images and give 'em a little scaling when you hover over because they should link to related posts from the blog
     .blog-gallery-img {
         flex-basis: 32%;
         padding: 0;
@@ -101,6 +107,7 @@
     }
 }
 
+// Styling for the comments regarding the blog post
 .comment-wrapper {
     display: flex;
     align-items: top;
@@ -128,6 +135,7 @@
     }
 }
 
+// The "Leave A Comment" and "Get In Touch With Us" form styling
 .comment-box {
 
     .form-header {
@@ -139,6 +147,7 @@
         }
     }
 
+    // The Name, Email, Subject text box inputs
     input[type=text] {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -154,6 +163,7 @@
         }
     }
 
+    // The full comment text area
     textarea {
         width: 100%;
         margin-top: 40px;
@@ -170,29 +180,117 @@
         }
     }
 
+    // Submit button styling
     button {
         margin-bottom: 150px;
     }
 }
 
+
+
 // Styling for CONTACT page (contact.html)
 .contact {
     position: relative;
 
+    // Position the "Contact Us" over the header image
     .contact-title {
         position: absolute;
-        top: -30%;
+        top: calc(-15% + 15px);
 
+        // This lets us cut the Contact Us onto two lines easily
         span {
             display: block;
+            margin-top: 20px;
         }
         
+        // Contact Us title text
         h2 {
-            line-height: 4rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
         }
     }
 
+    // Section headers for the Contact page
+    h3 {
+        font-size: 1rem;
+    }
+
+    // Contact page body text
+    p {
+        font-family: $body-font;
+        font-size: 0.7rem;
+        margin-bottom: 20px;
+        color: rgba($color: $black, $alpha: 0.6);
+    }
+
+    // Contact details section styling
     .contact-details {
         margin-top: 120px;
+
+        // Flex the Phone, Address, Email details in the "Contact Details" section
+        .contact-info-wrapper {
+            margin: 100px 0px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            // Put a divider (border-right) between these elements
+            .contact-info-item {
+                flex-basis: 25%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                border-right: 1px solid rgba($color: $black, $alpha: 0.2);
+
+                // No divider needed on last element
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        // Headings for "Phone", "Address", and "Email"
+        h4 {
+            margin: 7px 0px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+        }
+
+        // Text in the contact details section is a little closer together
+        p {
+            margin: 5px 0px;
+        }
+
+        // Style for decorative icons in the Contact Details section only
+        i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    // Slight changes to our comment box on the Contact page
+    .comment-box {
+        p {
+            margin-bottom: 100px;
+        }
+
+        button {
+            margin-bottom: 100px;
+        }
+    }
+
+    // Styling for the image at the very bottom of the Contact page
+    .footer-image {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+
+        // Allow this image to be re-sized dynamically
+        img {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            height: auto;
+        }
     }
 }
