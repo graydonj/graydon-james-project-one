@@ -25,6 +25,27 @@
 @media (max-width: 500px) {
     /* all of our styles for MOBILE devices will go within this breakpoint */
 
+    /* For the blog page, re-order the elements in a blog post header so they don't squish */
+    .blog {
+        .blog-post-header {
+            flex-direction: column;
+            width: 100%;
+
+            .blog-author,
+            .blog-info {
+                width: 100%;
+            }
+
+            .blog-info {
+                flex-direction: column;
+
+                .blog-info-text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     /* Flex the footer elements in a column, align their headers and content to match */
     footer {
         .footer-nav {
