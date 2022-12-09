@@ -281,6 +281,12 @@ h5 {
   margin: 0 0 24px 0;
 }
 
+h6 {
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
 p {
   line-height: 1rem;
   margin: 0;
@@ -569,12 +575,14 @@ footer {
   color: #F6F6F6;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
-  padding: 120px 0;
-  /* shared properties of all h5 in the footer */
+  padding: 120px 0 80px 0;
+  /* shared properties of all headers in the footer */
   /* shared properties of all paragraphs in the footer */
+  /* very bottom "tag" of footer element */
   /* set up flexbox */
 }
-footer h5 {
+footer h5,
+footer h6 {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   color: #F6F6F6;
@@ -586,6 +594,15 @@ footer p {
   font-size: 0.6rem;
   color: #F6F6F6;
   letter-spacing: 0.05rem;
+}
+footer h6 {
+  text-align: center;
+  margin: 0;
+}
+footer .footer-tag {
+  padding-top: 80px;
+  margin-top: 120px;
+  border-top: 1px solid rgba(246, 246, 246, 0.1);
 }
 footer .footer-nav {
   width: 100%;
