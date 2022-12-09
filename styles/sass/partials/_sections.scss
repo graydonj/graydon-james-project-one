@@ -1,5 +1,7 @@
 @use "variables" as *;
 
+
+// Styling for BLOG page (blog.html)
 .blog {
     p {
         font-family: $body-font;
@@ -170,5 +172,27 @@
 
     button {
         margin-bottom: 150px;
+    }
+}
+
+// Styling for CONTACT page (contact.html)
+.contact {
+    position: relative;
+
+    .contact-title {
+        position: absolute;
+        top: -30%;
+
+        span {
+            display: block;
+        }
+        
+        h2 {
+            line-height: 4rem;
+        }
+    }
+
+    .contact-details {
+        margin-top: 120px;
     }
 }

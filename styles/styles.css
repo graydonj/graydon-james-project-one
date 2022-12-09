@@ -523,6 +523,10 @@ header .header-img-blog {
   height: 100vh;
   background-image: url(../assets/blog-1.jpeg);
 }
+header .header-img-contact {
+  height: 24vh;
+  background-image: url(../assets/contact-1.jpeg);
+}
 
 .blog p {
   font-family: Open Sans, sans-serif;
@@ -698,6 +702,23 @@ header .header-img-blog {
 }
 .comment-box button {
   margin-bottom: 150px;
+}
+
+.contact {
+  position: relative;
+}
+.contact .contact-title {
+  position: absolute;
+  top: -30%;
+}
+.contact .contact-title span {
+  display: block;
+}
+.contact .contact-title h2 {
+  line-height: 4rem;
+}
+.contact .contact-details {
+  margin-top: 120px;
 }
 
 footer {
