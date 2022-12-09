@@ -35,13 +35,24 @@
             text-decoration: line-through;
             text-decoration-color: transparent;
             transition: text-decoration-color 0.5s ease;
+
+            // This extends the line-through by one character on each side, but is kludgy...
+            // &::before,
+            // &::after {
+            //     content: '\00a0';
+            // }
+
+            &:hover,
+            &:focus {
+                text-decoration-color: $black;
+            }
         }
 
-        a:hover,
+/*         a:hover,
         a:focus {
             text-decoration-color: $black;
         }
-
+ */
         .logo {
             text-decoration: none;
         }
