@@ -247,28 +247,32 @@ blockquote {
   font-weight: normal;
   color: #333333;
   margin: 0;
+  text-transform: uppercase;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-bottom: 18px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  margin-bottom: 24px;
 }
 
 h3 {
-  font-size: 2.7rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
   line-height: 3rem;
   margin-bottom: 24px;
 }
 
 h4 {
-  font-size: 1.7rem;
+  font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 18px;
 }
@@ -324,13 +328,24 @@ a {
   margin: 0 auto;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 button {
   color: #333333;
   background-color: transparent;
-  padding: 18px 36px;
-  border: 2px solid #333333;
+  padding: 5px;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.6);
+  text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 1.2rem;
   text-align: center;
   cursor: pointer;
@@ -340,14 +355,20 @@ button {
 }
 button:hover, button:focus {
   background-color: #333333;
-  color: #FFFFFF;
+  color: #F6F6F6;
+  border-bottom: 2px solid #333333;
 }
 button.search-icon {
   display: inherit;
   padding: 0;
   border: none;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
 }
 button.search-icon:hover, button.search-icon:focus {
+  -webkit-text-decoration-color: #333333;
+          text-decoration-color: #333333;
   background-color: transparent;
   color: #333333;
 }
@@ -497,13 +518,13 @@ header .header-img-blog {
   background-image: url(../assets/blog-1.jpeg);
 }
 
-.category-gallery {
+.blog-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -511,67 +532,23 @@ header .header-img-blog {
       flex-wrap: wrap;
   width: 100%;
 }
-.category-gallery .items {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-  padding: 45px;
-  margin: 50px 25px 25px;
-  border-radius: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-.category-gallery .items img {
-  max-width: 100%;
-  border-radius: 10%;
-  margin-bottom: 20px;
-}
-.category-gallery .items:hover, .category-gallery .items:focus {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+.blog-gallery .blog-gallery-img {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
-.play {
-  background-image: url(../assets/background-image.jpg);
-  background-position: center;
-  background-size: cover;
-  min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 0;
+.blog-gallery .blog-gallery-img img {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
 }
-.play .play-container {
-  max-width: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 70px 45px;
-  border: 24px solid #F6F6F6;
-  background-color: #FFFFFF;
+.blog-gallery .blog-gallery-img:hover, .blog-gallery .blog-gallery-img:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 footer {
