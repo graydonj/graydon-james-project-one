@@ -1,3 +1,5 @@
+// From e-commerce code-along, then modified for our use here
+
 @use "./partials/variables" as *;
 @use "./partials/setup";
 @use "./partials/base-styles";
@@ -6,15 +8,3 @@
 @use "./partials/sections";
 @use "./partials/footer";
 @use "./partials/media-queries";
-
-
-// From e-commerce code-along
-//@use "./partials/setup";
-//@use "./partials/variables";
-//@use "./partials/typography";
-//@use "./partials/base-styles";
-//@use "./partials/header";
-//@use "./partials/footer";
-//@use "./partials/nav";
-//@use "./partials/sections";
-//@use "./partials/media-queries";

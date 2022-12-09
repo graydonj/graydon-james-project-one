@@ -370,12 +370,12 @@ a.button:hover, a.button:focus {
 }
 
 .nav-bar {
-  /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.1 */
+  /* keep Nav Bar at the top of the screen, keep the background behind it but faded with alpha 0.8 */
   position: sticky;
   top: 0;
   z-index: 10;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url(../assets/home-1.jpeg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/home-1.jpeg);
+  background-color: rgba(246, 246, 246, 0.8);
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/home-1.jpeg); */
   background-attachment: fixed;
   background-position: auto, center top;
 }
@@ -491,6 +491,10 @@ header .header-img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+}
+header .header-img-blog {
+  height: 100vh;
+  background-image: url(../assets/blog-1.jpeg);
 }
 
 .category-gallery {
