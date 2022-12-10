@@ -41,7 +41,7 @@
                     height: auto;
                 }
             }
-        }
+        } //.branding-img end
 
         .branding-wrapper {
             margin-top: 60px;
@@ -58,9 +58,144 @@
             .branding-item {
                 flex-basis: 30%;
             }
+        } // .branding-wrapper end
+    } // .branding end
+
+    .portfolio {
+        margin: 120px 0;
+
+        .portfolio-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .portfolio-arrow {
+                flex-basis: 10%;
+
+                i {
+                    font-size: 3rem;
+                }
+            }
+
+            .portfolio-arrow-right {
+                text-align: right;
+            }
+
+            button {
+                border: none;
+                color: rgba($color: $black, $alpha: 0.6);
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $black;
+                }
+            }
+
+            .portfolio-item {
+                flex-basis: 50%;
+
+                img {
+                    display: block;
+                    margin: 0 auto 60px auto;
+                    width: 50%;
+                    height: auto;
+                    border-radius: 50%;
+                }
+
+                p {
+                    text-align: center;
+                    font-style: italic;
+                }
+            }
+        } // .portfolio-wrapper end
+
+    } // .portfolio end
+
+    .services {
+        padding: 180px 0 80px 0;
+        background-image: url(../assets/home-4.jpeg);
+
+        .services-wrapper {
+            margin-left: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .services-item {
+                margin-bottom: 40px;
+                flex-basis: 50%;
+                display: flex;
+                align-items: flex-start;
+
+
+                .services-logo {
+                    flex-basis: 18%;
+
+                    i {
+                        padding: 15px;
+                        font-size: 1.5rem;
+                        border-radius: 50%;
+                        border: 2px solid $black;
+                    }
+                }
+
+                .services-item-text {
+                    padding: 0px 40px 40px 40px;
+                }
+            }
+        } // .services-wrapper end
+    } // .services end
+
+    .team {
+        padding: 120px 0;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
         }
-    }
+
+        h3 {
+            letter-spacing: 0.2rem;
+        }
+
+        .team-wrapper {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .team-text-wide {
+                align-self: stretch;
+                flex-basis: 49.5%;
+                padding-top: 10%;
+                padding-left: 40px;
+                padding-right: 40px;
+                background-color: $white-two;
+            }
+
+            .team-img {
+                flex-basis: 24%;
+
+                img {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .team-text {
+                flex-basis: 24%;
+                padding: 0 20px;
+                text-align: center;
+            }
+        } // .team-wrapper end
+
+    } // .team end
 }
+
 
 // Styling for BLOG page (blog.html)
 .blog {
