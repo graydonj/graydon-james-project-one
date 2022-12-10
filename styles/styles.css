@@ -532,8 +532,14 @@ header .header-img-contact {
   background-image: url(../assets/contact-1.jpeg);
 }
 
+.index h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
 .index h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
@@ -644,6 +650,8 @@ header .header-img-contact {
 .index .services {
   padding: 180px 0 80px 0;
   background-image: url(../assets/home-4.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .index .services .services-wrapper {
   margin-left: 50%;
@@ -686,11 +694,6 @@ header .header-img-contact {
 .index .team {
   padding: 120px 0;
 }
-.index .team h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-}
 .index .team h3 {
   letter-spacing: 0.2rem;
 }
@@ -730,6 +733,49 @@ header .header-img-contact {
       flex-basis: 24%;
   padding: 0 20px;
   text-align: center;
+}
+.index .shop {
+  background-color: #C3DAB7;
+}
+.index .shop .shop-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.index .shop .shop-wrapper .shop-item {
+  padding: 380px 200px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.index .shop .shop-wrapper p {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.index .shop .shop-wrapper button {
+  border: none;
+  background-color: #F6F6F6;
+  padding: 20px 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.index .shop .shop-wrapper button:hover, .index .shop .shop-wrapper button:focus {
+  border: none;
+  background-color: #333333;
+  color: #F6F6F6;
+}
+.index .shop .shop-wrapper .shop-item-right {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  background-image: url(../assets/home-10.jpeg);
+  background-size: cover;
 }
 
 .blog p {

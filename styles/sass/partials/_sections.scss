@@ -2,9 +2,15 @@
 
 // Styling for index.html
 .index {
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.05rem;
+    }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 1.5rem;
     }
@@ -115,6 +121,8 @@
     .services {
         padding: 180px 0 80px 0;
         background-image: url(../assets/home-4.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
 
         .services-wrapper {
             margin-left: 50%;
@@ -150,12 +158,6 @@
 
     .team {
         padding: 120px 0;
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-align: center;
-        }
 
         h3 {
             letter-spacing: 0.2rem;
@@ -194,6 +196,49 @@
         } // .team-wrapper end
 
     } // .team end
+
+    .shop {
+        background-color: $light-sage;
+
+        .shop-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .shop-item {
+                padding: 380px 200px;
+                flex-basis: 50%;
+            }
+
+            p {
+                margin-top: 40px;
+                margin-bottom: 70px;
+            }
+
+            button {
+                border: none;
+                background-color: $white-two;
+                padding: 20px 50px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+
+                &:hover,
+                &:focus {
+                    border: none;
+                    background-color: $black;
+                    color: $white-two;
+                }
+            }
+
+            .shop-item-right {
+                align-self: stretch;
+                background-image: url(../assets/home-10.jpeg);
+                background-size: cover;
+            }
+        } // .shop-wrapper end
+    } // .shop end
 }
 
 
@@ -201,7 +246,7 @@
 .blog {
     p {
         margin-bottom: 20px;
- 
+
         // We have a few bits of text that are highlighted in some way
         .highlighted {
             color: $black;
