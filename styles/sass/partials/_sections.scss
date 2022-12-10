@@ -1,13 +1,72 @@
 @use "variables" as *;
 
+// Styling for index.html
+.index {
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+
+    .branding {
+        background-color: $light-sage;
+
+        p {
+            color: $black;
+        }
+
+        .branding-img {
+            padding-top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+            img {
+                margin: 0 auto;
+                width: 40%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 80px;
+                left: 20%;
+                transition: 0.5s;
+
+                img {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .branding-wrapper {
+            margin-top: 60px;
+            padding-bottom: 120px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            h3,
+            p {
+                text-align: center;
+            }
+
+            .branding-item {
+                flex-basis: 30%;
+            }
+        }
+    }
+}
+
 // Styling for BLOG page (blog.html)
 .blog {
     p {
-        font-family: $body-font;
-        font-size: 0.7rem;
         margin-bottom: 20px;
-        color: rgba($color: $black, $alpha: 0.6);
-
+ 
         // We have a few bits of text that are highlighted in some way
         .highlighted {
             color: $black;
@@ -213,14 +272,6 @@
     // Section headers for the Contact page
     h3 {
         font-size: 1rem;
-    }
-
-    // Contact page body text
-    p {
-        font-family: $body-font;
-        font-size: 0.7rem;
-        margin-bottom: 20px;
-        color: rgba($color: $black, $alpha: 0.6);
     }
 
     // Contact details section styling

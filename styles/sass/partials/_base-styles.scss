@@ -65,6 +65,10 @@ h6 {
 }
 
 p {
+    font-family: $body-font;
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    color: rgba($color: $black, $alpha: 0.6);
     line-height: 1rem;
     margin: 0;
 

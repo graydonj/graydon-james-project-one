@@ -292,6 +292,10 @@ h6 {
 }
 
 p {
+  font-family: Open Sans, sans-serif;
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+  color: rgba(51, 51, 51, 0.6);
   line-height: 1rem;
   margin: 0;
 }
@@ -528,11 +532,71 @@ header .header-img-contact {
   background-image: url(../assets/contact-1.jpeg);
 }
 
+.index h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.index .branding {
+  background-color: #C3DAB7;
+}
+.index .branding p {
+  color: #333333;
+}
+.index .branding .branding-img {
+  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.index .branding .branding-img img {
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+}
+.index .branding .branding-img .overlay {
+  position: absolute;
+  top: 80px;
+  left: 20%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.index .branding .branding-img .overlay img {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+.index .branding .branding-wrapper {
+  margin-top: 60px;
+  padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.index .branding .branding-wrapper h3,
+.index .branding .branding-wrapper p {
+  text-align: center;
+}
+.index .branding .branding-wrapper .branding-item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
 .blog p {
-  font-family: Open Sans, sans-serif;
-  font-size: 0.7rem;
   margin-bottom: 20px;
-  color: rgba(51, 51, 51, 0.6);
 }
 .blog p .highlighted {
   color: #333333;
@@ -722,12 +786,6 @@ header .header-img-contact {
 .contact h3 {
   font-size: 1rem;
 }
-.contact p {
-  font-family: Open Sans, sans-serif;
-  font-size: 0.7rem;
-  margin-bottom: 20px;
-  color: rgba(51, 51, 51, 0.6);
-}
 .contact .contact-details {
   margin-top: 120px;
 }
@@ -905,12 +963,30 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   .nav-bar button {
     margin-top: 10px;
   }
+  /* Resize the overlay image on index.html */
+  .index .branding .branding-img .overlay {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    left: 16%;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
+  /* Resize the overlay image on index.html */
+  .index .branding .branding-img .overlay {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: 11%;
+  }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+  /* Resize the overlay image on index.html */
+  .index .branding .branding-img .overlay {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    left: 2%;
+  }
   /* For the blog page, re-order the elements in a blog post header so they don't squish */
   .blog .blog-post-header {
     -webkit-box-orient: vertical;

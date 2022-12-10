@@ -16,14 +16,50 @@
             margin-top: 10px;
         }
     }
+
+    /* Resize the overlay image on index.html */
+    .index {
+        .branding {
+            .branding-img {
+                .overlay {
+                    transform: scale(0.8);
+                    left: 16%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 800px) {
     /* all of our styles for TABLET devices will go within this breakpoint */
+
+    /* Resize the overlay image on index.html */
+    .index {
+        .branding {
+            .branding-img {
+                .overlay {
+                    transform: scale(0.6);
+                    left: 11%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
     /* all of our styles for MOBILE devices will go within this breakpoint */
+
+    /* Resize the overlay image on index.html */
+    .index {
+        .branding {
+            .branding-img {
+                .overlay {
+                    transform: scale(0.3);
+                    left: 2%;
+                }
+            }
+        }
+    }
 
     /* For the blog page, re-order the elements in a blog post header so they don't squish */
     .blog {
