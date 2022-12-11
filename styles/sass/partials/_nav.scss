@@ -48,11 +48,6 @@
             }
         }
 
-/*         a:hover,
-        a:focus {
-            text-decoration-color: $black;
-        }
- */
         .logo {
             text-decoration: none;
         }
@@ -87,6 +82,15 @@
 
     .search-cart {
         display: flex;
+
+        a {
+            
+        // This turns off the extension of the line-through by one character on each side for Search and Shopbag icons
+            &::before,
+            &::after {
+                content: '';
+            }
+        }
     }
 
     .counter {
