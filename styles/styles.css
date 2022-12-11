@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap';
 html {
   line-height: 1.15;
@@ -449,6 +450,11 @@ a.button:hover, a.button:focus {
   transition: -webkit-text-decoration-color 0.5s ease;
   transition: text-decoration-color 0.5s ease;
   transition: text-decoration-color 0.5s ease, -webkit-text-decoration-color 0.5s ease;
+}
+.nav-bar .nav-menu a::before, .nav-bar .nav-menu a::after,
+.nav-bar .nav-menu-center a::before,
+.nav-bar .nav-menu-center a::after {
+  content: " ";
 }
 .nav-bar .nav-menu a:hover, .nav-bar .nav-menu a:focus,
 .nav-bar .nav-menu-center a:hover,
