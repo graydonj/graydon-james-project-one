@@ -652,6 +652,7 @@ header .header-img-contact {
   background-image: url(../assets/home-4.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top right;
 }
 .index .services .services-wrapper {
   margin-left: 50%;
@@ -689,6 +690,9 @@ header .header-img-contact {
   border: 2px solid #333333;
 }
 .index .services .services-wrapper .services-item .services-item-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding: 0px 40px 40px 40px;
 }
 .index .team {
@@ -778,6 +782,9 @@ header .header-img-contact {
   background-size: cover;
 }
 
+.blog {
+  padding-top: 80px;
+}
 .blog p {
   margin-bottom: 20px;
 }
@@ -1031,10 +1038,6 @@ footer {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   padding: 120px 0 80px 0;
-  /* shared properties of all headers in the footer */
-  /* shared properties of all paragraphs in the footer */
-  /* very bottom "tag" of footer element */
-  /* set up flexbox */
 }
 footer h5,
 footer h6 {
@@ -1067,12 +1070,6 @@ footer .footer-nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /* each element of footer takes up 1/3 of the space */
-  /* in the Contact Us section, keep the a href (on the mailto:) the same as the rest of the text */
-  /* middle section of footer, so we align it to look "centered" */
-  /* right-side section of footer so we align it to the right */
-  /* email input field styling; place the "arrow" button relative to the input field */
-  /* common styles for all anchor tags */
 }
 footer .footer-nav .footer-box {
   -ms-flex-wrap: nowrap;
@@ -1082,7 +1079,6 @@ footer .footer-nav .footer-box {
 }
 footer .footer-nav .social-media {
   margin-top: 30px;
-  /* styling only for social media icons */
 }
 footer .footer-nav .social-media i {
   padding-right: 15px;
@@ -1133,7 +1129,6 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
 
 @media (max-width: 1100px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
-  /* Re-orient the Nav elements into columns on either side of logo/title */
   .nav-bar .nav-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1146,31 +1141,34 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   .nav-bar button {
     margin-top: 10px;
   }
-  /* Resize the overlay image on index.html */
   .index .branding .branding-img .overlay {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     left: 16%;
   }
+  .index .services .services-wrapper .services-item .services-item-text {
+    padding: 0 10px 10px 10px;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
-  /* Resize the overlay image on index.html */
   .index .branding .branding-img .overlay {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     left: 11%;
   }
+  .index .services .services-wrapper .services-item {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
-  /* Resize the overlay image on index.html */
   .index .branding .branding-img .overlay {
     -webkit-transform: scale(0.3);
             transform: scale(0.3);
     left: 2%;
   }
-  /* For the blog page, re-order the elements in a blog post header so they don't squish */
   .blog .blog-post-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1191,7 +1189,6 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   .blog .blog-post-header .blog-info .blog-info-text {
     width: 100%;
   }
-  /* Flex the footer elements in a column, align their headers and content to match */
   footer .footer-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

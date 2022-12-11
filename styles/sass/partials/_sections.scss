@@ -22,6 +22,7 @@
             color: $black;
         }
 
+        // The main image, resizable/centered by flexbox
         .branding-img {
             padding-top: 200px;
             display: flex;
@@ -35,6 +36,7 @@
                 height: auto;
             }
 
+            // Use relative positioning for the overlay image
             .overlay {
                 position: absolute;
                 top: 80px;
@@ -49,6 +51,7 @@
             }
         } //.branding-img end
 
+        // Using flexbox to easily show the side-by-side header/descriptions
         .branding-wrapper {
             margin-top: 60px;
             padding-bottom: 120px;
@@ -70,6 +73,7 @@
     .portfolio {
         margin: 120px 0;
 
+        // Portfolio area uses a flex to allow the arrows and image to flow and re-size dynamically
         .portfolio-wrapper {
             display: flex;
             justify-content: space-between;
@@ -87,6 +91,7 @@
                 text-align: right;
             }
 
+            // The arrow left and arrow right are treated as buttons
             button {
                 border: none;
                 color: rgba($color: $black, $alpha: 0.6);
@@ -98,6 +103,7 @@
                 }
             }
 
+            // Portfolio image and text underneath it
             .portfolio-item {
                 flex-basis: 50%;
 
@@ -123,7 +129,9 @@
         background-image: url(../assets/home-4.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: top right;
 
+        // Covers just the right-hand side (outside .wrapper), and inside the flexbox we have logo next to heading and description text
         .services-wrapper {
             margin-left: 50%;
             display: flex;
@@ -150,6 +158,7 @@
                 }
 
                 .services-item-text {
+                    flex: 1 1 auto;
                     padding: 0px 40px 40px 40px;
                 }
             }
@@ -163,12 +172,14 @@
             letter-spacing: 0.2rem;
         }
 
+        // Team images are presented alongside some textual elements in a flexbox
         .team-wrapper {
             margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
+            // Double-wide text element; stretched so the background aligns with the edges of the images
             .team-text-wide {
                 align-self: stretch;
                 flex-basis: 49.5%;
@@ -200,6 +211,7 @@
     .shop {
         background-color: $light-sage;
 
+        // A simple flex containing a header, description, and button
         .shop-wrapper {
             display: flex;
             justify-content: center;
@@ -216,6 +228,7 @@
                 margin-bottom: 70px;
             }
 
+            // Have to style the button in a deep specificity because it only looks this way for this section
             button {
                 border: none;
                 background-color: $white-two;
@@ -244,6 +257,8 @@
 
 // Styling for BLOG page (blog.html)
 .blog {
+    padding-top: 80px;
+
     p {
         margin-bottom: 20px;
 

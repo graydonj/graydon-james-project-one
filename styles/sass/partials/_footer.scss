@@ -7,7 +7,7 @@ footer {
     font-weight: 400;
     padding: 120px 0 80px 0;
 
-    /* shared properties of all headers in the footer */
+    // shared properties of all headers in the footer
     h5,
     h6 {
         font-family: $nav-font;
@@ -16,7 +16,7 @@ footer {
         margin-bottom: 40px;
     }
 
-    /* shared properties of all paragraphs in the footer */
+    // shared properties of all paragraphs in the footer
     p {
         font-family: $nav-font;
         font-weight: 400;
@@ -25,7 +25,7 @@ footer {
         letter-spacing: 0.05rem;
     }
 
-    /* very bottom "tag" of footer element */
+    // very bottom "tag" of footer element
     h6 {
         text-align: center;
         margin: 0;
@@ -37,13 +37,13 @@ footer {
         border-top: 1px solid rgba($color: $white-two, $alpha: 0.1);
     }
 
-    /* set up flexbox */
+    // set up flexbox
     .footer-nav {
         width: 100%;
         display: flex;
         justify-content: space-between;
 
-        /* each element of footer takes up 1/3 of the space */
+        // each element of footer takes up 1/3 of the space
         .footer-box {
             flex-wrap: nowrap;
             flex-basis: 33%;
@@ -52,7 +52,7 @@ footer {
         .social-media {
             margin-top: 30px;
 
-            /* styling only for social media icons */
+            // styling only for social media icons
             i {
                 padding-right: 15px;
                 color: rgba($color: $white-two, $alpha: 0.8);
@@ -60,14 +60,14 @@ footer {
             }
         }
 
-        /* in the Contact Us section, keep the a href (on the mailto:) the same as the rest of the text */
+        // in the Contact Us section, keep the a href (on the mailto:) the same as the rest of the text
         .footer-contact {
             a {
                 color: $white-two;
             }
         }
 
-        /* middle section of footer, so we align it to look "centered" */
+        // middle section of footer, so we align it to look "centered"
         .footer-blog {
             h5 {
                 text-align: center;
@@ -78,7 +78,7 @@ footer {
             }
         }
 
-        /* right-side section of footer so we align it to the right */
+        // right-side section of footer so we align it to the right
         .footer-twitter {
             h5,
             p {
@@ -90,7 +90,7 @@ footer {
             }
         }
 
-        /* email input field styling; place the "arrow" button relative to the input field */
+        // email input field styling; place the "arrow" button relative to the input field
         input {
             width: 65%;
             margin: 30px 0;
@@ -110,7 +110,7 @@ footer {
             border: none;
         }
 
-        /* common styles for all anchor tags */
+        // common styles for all anchor tags in the footer
         a {
             color: rgba($color: $white-two, $alpha: 0.8);
             font-size: 0.7rem;
