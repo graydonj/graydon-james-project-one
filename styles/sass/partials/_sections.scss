@@ -191,13 +191,20 @@
             background-color: $white-two;
         }
 
+        // Team images have a little scale-down to indicate they go somewhere when clicked
         .team-img {
             flex-basis: 24%;
+            transition: 0.5s;
 
             img {
                 margin: 0 auto;
                 width: 100%;
                 height: auto;
+            }
+
+            &:hover,
+            &:focus {
+                transform: scale(0.95);
             }
         }
 

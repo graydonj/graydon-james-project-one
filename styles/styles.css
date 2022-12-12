@@ -734,11 +734,17 @@ header .header-img-contact {
 .team .team-wrapper .team-img {
   -ms-flex-preferred-size: 24%;
       flex-basis: 24%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .team .team-wrapper .team-img img {
   margin: 0 auto;
   width: 100%;
   height: auto;
+}
+.team .team-wrapper .team-img:hover, .team .team-wrapper .team-img:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 .team .team-wrapper .team-text {
   -ms-flex-preferred-size: 24%;
