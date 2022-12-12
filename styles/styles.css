@@ -1190,6 +1190,26 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
             transform: scale(0.6);
     left: 11%;
   }
+  footer .footer-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-nav .footer-box {
+    margin-bottom: 30px;
+  }
+  footer .footer-nav .footer-box h5 {
+    text-align: center;
+  }
+  footer .footer-nav .footer-box p,
+footer .footer-nav .footer-box .social-media {
+    text-align: left;
+    padding-left: 13%;
+  }
+  footer .footer-nav .footer-box button {
+    right: 100px;
+  }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
@@ -1220,25 +1240,5 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   }
   .blog .blog-post-header .blog-info .blog-info-text {
     width: 100%;
-  }
-  footer .footer-nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer .footer-nav .footer-box {
-    margin-bottom: 30px;
-  }
-  footer .footer-nav .footer-box h5 {
-    text-align: center;
-  }
-  footer .footer-nav .footer-box p,
-footer .footer-nav .footer-box .social-media {
-    text-align: left;
-    padding-left: 13%;
-  }
-  footer .footer-nav .footer-box button {
-    right: 100px;
   }
 }
