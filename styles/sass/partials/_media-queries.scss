@@ -1,5 +1,27 @@
+@media (max-width: 1300px) {
+    // Give Services text a little more room
+    .services {
+        .services-wrapper {
+            margin-left: 37%;
+        }
+    }
+}
+
 @media (max-width: 1100px) {
     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+
+// Give Services text a little more room and a little less padding
+    .services {
+        .services-wrapper {
+            margin-left: 30%;
+
+            .services-item {
+                .services-item-text {
+                    padding: 0 20px 20px 20px;
+                }
+            }
+        }
+    }
 
     // Re-orient the Nav elements into columns on either side of logo/title
     .nav-bar {
@@ -17,7 +39,7 @@
         }
     }
 
-
+    // In index, we move/resize the overlay image
     .branding {
         .branding-img {
 
@@ -29,20 +51,27 @@
         }
     }
 
-    // Give Services text a little more room/less padding
-    .services {
-        .services-wrapper {
-            .services-item {
-                .services-item-text {
-                    padding: 0 10px 10px 10px;
-                }
-            }
+    // In the blog and contacts page we re-order form elements (name, email, subject) so they can be easily seen
+    .comment-box {
+        .form-header {
+            flex-direction: column;
         }
     }
 }
 
 @media (max-width: 800px) {
     /* all of our styles for TABLET devices will go within this breakpoint */
+
+    // At this point Services items will only fit one "box" per line
+    .services {
+        .services-wrapper {
+            margin-left: 25%;
+
+            .services-item {
+                flex-basis: 90%;
+            }
+        }
+    }
 
     // Resize the overlay image on index.html
     .branding {
@@ -53,19 +82,17 @@
             }
         }
     }
-
-    // At this point Services items will only fit one "box" per line
-    .services {
-        .services-wrapper {
-            .services-item {
-                flex-basis: 90%;
-            }
-        }
-    }
 }
 
 @media (max-width: 500px) {
     /* all of our styles for MOBILE devices will go within this breakpoint */
+
+    // Final increase in services wrapper size to accomodate text
+    .services {
+        .services-wrapper {
+            margin-left: 10%;
+        }
+    }
 
     // Resize the overlay image on index.html
     .branding {

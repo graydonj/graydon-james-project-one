@@ -133,7 +133,8 @@
     background-repeat: no-repeat;
     background-position: top right;
 
-    // Covers just the right-hand side (outside .wrapper), and inside the flexbox we have logo next to heading and description text
+    // Covers just the right-hand side (outside .wrapper).
+    // And inside the flexbox we have logo next to heading and description text
     .services-wrapper {
         margin-left: 50%;
         display: flex;

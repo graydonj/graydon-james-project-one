@@ -403,9 +403,6 @@ a.button:hover, a.button:focus {
   top: 0;
   z-index: 10;
   background-color: rgba(246, 246, 246, 0.8);
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/home-1.jpeg); */
-  background-attachment: fixed;
-  background-position: auto, center top;
 }
 .nav-bar .wrapper {
   display: -webkit-box;
@@ -517,7 +514,7 @@ a.button:hover, a.button:focus {
 }
 
 header .header-img {
-  height: 120vh;
+  height: 110vh;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -525,7 +522,7 @@ header .header-img {
   background-image: url(../assets/home-1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: top center;
 }
 header .header-img-blog {
   height: 100vh;
@@ -1142,8 +1139,19 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   color: white;
 }
 
+@media (max-width: 1300px) {
+  .services .services-wrapper {
+    margin-left: 37%;
+  }
+}
 @media (max-width: 1100px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  .services .services-wrapper {
+    margin-left: 30%;
+  }
+  .services .services-wrapper .services-item .services-item-text {
+    padding: 0 20px 20px 20px;
+  }
   .nav-bar .nav-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1161,24 +1169,33 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
             transform: scale(0.8);
     left: 16%;
   }
-  .services .services-wrapper .services-item .services-item-text {
-    padding: 0 10px 10px 10px;
+  .comment-box .form-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
-  .branding .branding-img .overlay {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    left: 11%;
+  .services .services-wrapper {
+    margin-left: 25%;
   }
   .services .services-wrapper .services-item {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
   }
+  .branding .branding-img .overlay {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    left: 11%;
+  }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+  .services .services-wrapper {
+    margin-left: 10%;
+  }
   .branding .branding-img .overlay {
     -webkit-transform: scale(0.3);
             transform: scale(0.3);
