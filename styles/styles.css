@@ -547,13 +547,14 @@ header .header-img-contact {
   font-weight: 400;
   line-height: 1.5rem;
 }
-.index .branding {
+
+.branding {
   background-color: #C3DAB7;
 }
-.index .branding p {
+.branding p {
   color: #333333;
 }
-.index .branding .branding-img {
+.branding .branding-img {
   padding-top: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,24 +567,24 @@ header .header-img-contact {
           align-items: center;
   position: relative;
 }
-.index .branding .branding-img img {
+.branding .branding-img img {
   margin: 0 auto;
   width: 40%;
   height: auto;
 }
-.index .branding .branding-img .overlay {
+.branding .branding-img .overlay {
   position: absolute;
   top: 80px;
   left: 20%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.index .branding .branding-img .overlay img {
+.branding .branding-img .overlay img {
   margin: 0 auto;
   width: 100%;
   height: auto;
 }
-.index .branding .branding-wrapper {
+.branding .branding-wrapper {
   margin-top: 60px;
   padding-bottom: 120px;
   display: -webkit-box;
@@ -596,18 +597,19 @@ header .header-img-contact {
       -ms-flex-align: center;
           align-items: center;
 }
-.index .branding .branding-wrapper h3,
-.index .branding .branding-wrapper p {
+.branding .branding-wrapper h3,
+.branding .branding-wrapper p {
   text-align: center;
 }
-.index .branding .branding-wrapper .branding-item {
+.branding .branding-wrapper .branding-item {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
-.index .portfolio {
+
+.portfolio {
   margin: 120px 0;
 }
-.index .portfolio .portfolio-wrapper {
+.portfolio .portfolio-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,47 +620,48 @@ header .header-img-contact {
       -ms-flex-align: center;
           align-items: center;
 }
-.index .portfolio .portfolio-wrapper .portfolio-arrow {
+.portfolio .portfolio-wrapper .portfolio-arrow {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
 }
-.index .portfolio .portfolio-wrapper .portfolio-arrow i {
+.portfolio .portfolio-wrapper .portfolio-arrow i {
   font-size: 3rem;
 }
-.index .portfolio .portfolio-wrapper .portfolio-arrow-right {
+.portfolio .portfolio-wrapper .portfolio-arrow-right {
   text-align: right;
 }
-.index .portfolio .portfolio-wrapper button {
+.portfolio .portfolio-wrapper button {
   border: none;
   color: rgba(51, 51, 51, 0.6);
 }
-.index .portfolio .portfolio-wrapper button:hover, .index .portfolio .portfolio-wrapper button:focus {
+.portfolio .portfolio-wrapper button:hover, .portfolio .portfolio-wrapper button:focus {
   background-color: transparent;
   color: #333333;
 }
-.index .portfolio .portfolio-wrapper .portfolio-item {
+.portfolio .portfolio-wrapper .portfolio-item {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-.index .portfolio .portfolio-wrapper .portfolio-item img {
+.portfolio .portfolio-wrapper .portfolio-item img {
   display: block;
   margin: 0 auto 60px auto;
   width: 50%;
   height: auto;
   border-radius: 50%;
 }
-.index .portfolio .portfolio-wrapper .portfolio-item p {
+.portfolio .portfolio-wrapper .portfolio-item p {
   text-align: center;
   font-style: italic;
 }
-.index .services {
+
+.services {
   padding: 180px 0 80px 0;
   background-image: url(../assets/home-4.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 }
-.index .services .services-wrapper {
+.services .services-wrapper {
   margin-left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,7 +675,7 @@ header .header-img-contact {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.index .services .services-wrapper .services-item {
+.services .services-wrapper .services-item {
   margin-bottom: 40px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -683,29 +686,30 @@ header .header-img-contact {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.index .services .services-wrapper .services-item .services-logo {
+.services .services-wrapper .services-item .services-logo {
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
 }
-.index .services .services-wrapper .services-item .services-logo i {
+.services .services-wrapper .services-item .services-logo i {
   padding: 15px;
   font-size: 1.5rem;
   border-radius: 50%;
   border: 2px solid #333333;
 }
-.index .services .services-wrapper .services-item .services-item-text {
+.services .services-wrapper .services-item .services-item-text {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 0px 40px 40px 40px;
 }
-.index .team {
+
+.team {
   padding: 120px 0;
 }
-.index .team h3 {
+.team h3 {
   letter-spacing: 0.2rem;
 }
-.index .team .team-wrapper {
+.team .team-wrapper {
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,7 +721,7 @@ header .header-img-contact {
       -ms-flex-align: center;
           align-items: center;
 }
-.index .team .team-wrapper .team-text-wide {
+.team .team-wrapper .team-text-wide {
   -ms-flex-item-align: stretch;
       align-self: stretch;
   -ms-flex-preferred-size: 49.5%;
@@ -727,25 +731,26 @@ header .header-img-contact {
   padding-right: 40px;
   background-color: #F6F6F6;
 }
-.index .team .team-wrapper .team-img {
+.team .team-wrapper .team-img {
   -ms-flex-preferred-size: 24%;
       flex-basis: 24%;
 }
-.index .team .team-wrapper .team-img img {
+.team .team-wrapper .team-img img {
   margin: 0 auto;
   width: 100%;
   height: auto;
 }
-.index .team .team-wrapper .team-text {
+.team .team-wrapper .team-text {
   -ms-flex-preferred-size: 24%;
       flex-basis: 24%;
   padding: 0 20px;
   text-align: center;
 }
-.index .shop {
+
+.shop {
   background-color: #C3DAB7;
 }
-.index .shop .shop-wrapper {
+.shop .shop-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -757,16 +762,16 @@ header .header-img-contact {
           align-items: center;
   text-align: center;
 }
-.index .shop .shop-wrapper .shop-item {
+.shop .shop-wrapper .shop-item {
   padding: 380px 200px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-.index .shop .shop-wrapper p {
+.shop .shop-wrapper p {
   margin-top: 40px;
   margin-bottom: 70px;
 }
-.index .shop .shop-wrapper button {
+.shop .shop-wrapper button {
   border: none;
   background-color: #F6F6F6;
   padding: 20px 50px;
@@ -774,12 +779,12 @@ header .header-img-contact {
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
-.index .shop .shop-wrapper button:hover, .index .shop .shop-wrapper button:focus {
+.shop .shop-wrapper button:hover, .shop .shop-wrapper button:focus {
   border: none;
   background-color: #333333;
   color: #F6F6F6;
 }
-.index .shop .shop-wrapper .shop-item-right {
+.shop .shop-wrapper .shop-item-right {
   -ms-flex-item-align: stretch;
       align-self: stretch;
   background-image: url(../assets/home-10.jpeg);
@@ -1145,30 +1150,30 @@ footer .footer-nav a:hover, footer .footer-nav a:focus {
   .nav-bar button {
     margin-top: 10px;
   }
-  .index .branding .branding-img .overlay {
+  .branding .branding-img .overlay {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     left: 16%;
   }
-  .index .services .services-wrapper .services-item .services-item-text {
+  .services .services-wrapper .services-item .services-item-text {
     padding: 0 10px 10px 10px;
   }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
-  .index .branding .branding-img .overlay {
+  .branding .branding-img .overlay {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     left: 11%;
   }
-  .index .services .services-wrapper .services-item {
+  .services .services-wrapper .services-item {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
   }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
-  .index .branding .branding-img .overlay {
+  .branding .branding-img .overlay {
     -webkit-transform: scale(0.3);
             transform: scale(0.3);
     left: 2%;

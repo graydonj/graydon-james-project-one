@@ -17,25 +17,24 @@
         }
     }
 
-    .index {
-        .branding {
-            .branding-img {
 
-                // Resize the overlay image on index.html
-                .overlay {
-                    transform: scale(0.8);
-                    left: 16%;
-                }
+    .branding {
+        .branding-img {
+
+            // Resize the overlay image on index.html
+            .overlay {
+                transform: scale(0.8);
+                left: 16%;
             }
         }
+    }
 
-        // Give Services text a little more room/less padding
-        .services {
-            .services-wrapper {
-                .services-item {
-                    .services-item-text {
-                        padding: 0 10px 10px 10px;
-                    }
+    // Give Services text a little more room/less padding
+    .services {
+        .services-wrapper {
+            .services-item {
+                .services-item-text {
+                    padding: 0 10px 10px 10px;
                 }
             }
         }
@@ -45,24 +44,21 @@
 @media (max-width: 800px) {
     /* all of our styles for TABLET devices will go within this breakpoint */
 
-    .index {
-
-        // Resize the overlay image on index.html
-        .branding {
-            .branding-img {
-                .overlay {
-                    transform: scale(0.6);
-                    left: 11%;
-                }
+    // Resize the overlay image on index.html
+    .branding {
+        .branding-img {
+            .overlay {
+                transform: scale(0.6);
+                left: 11%;
             }
         }
+    }
 
-        // At this point Services items will only fit one "box" per line
-        .services {
-            .services-wrapper {
-                .services-item {
-                    flex-basis: 90%;
-                }
+    // At this point Services items will only fit one "box" per line
+    .services {
+        .services-wrapper {
+            .services-item {
+                flex-basis: 90%;
             }
         }
     }
@@ -72,13 +68,11 @@
     /* all of our styles for MOBILE devices will go within this breakpoint */
 
     // Resize the overlay image on index.html
-    .index {
-        .branding {
-            .branding-img {
-                .overlay {
-                    transform: scale(0.3);
-                    left: 2%;
-                }
+    .branding {
+        .branding-img {
+            .overlay {
+                transform: scale(0.3);
+                left: 2%;
             }
         }
     }

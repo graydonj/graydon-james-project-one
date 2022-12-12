@@ -14,245 +14,247 @@
         font-weight: 400;
         line-height: 1.5rem;
     }
+}
 
-    .branding {
-        background-color: $light-sage;
+// Styling for the different sections of index follow...
+.branding {
+    background-color: $light-sage;
 
-        p {
-            color: $black;
+    p {
+        color: $black;
+    }
+
+    // The main image, resizable/centered by flexbox
+    .branding-img {
+        padding-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+        img {
+            margin: 0 auto;
+            width: 40%;
+            height: auto;
         }
 
-        // The main image, resizable/centered by flexbox
-        .branding-img {
-            padding-top: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            
+        // Use relative positioning for the overlay image
+        .overlay {
+            position: absolute;
+            top: 80px;
+            left: 20%;
+            transition: 0.5s;
+
             img {
                 margin: 0 auto;
-                width: 40%;
+                width: 100%;
                 height: auto;
             }
+        }
+    } //.branding-img end
 
-            // Use relative positioning for the overlay image
-            .overlay {
-                position: absolute;
-                top: 80px;
-                left: 20%;
-                transition: 0.5s;
+    // Using flexbox to easily show the side-by-side header/descriptions
+    .branding-wrapper {
+        margin-top: 60px;
+        padding-bottom: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
 
-                img {
-                    margin: 0 auto;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        } //.branding-img end
-
-        // Using flexbox to easily show the side-by-side header/descriptions
-        .branding-wrapper {
-            margin-top: 60px;
-            padding-bottom: 120px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-            h3,
-            p {
-                text-align: center;
-            }
-
-            .branding-item {
-                flex-basis: 30%;
-            }
-        } // .branding-wrapper end
-    } // .branding end
-
-    .portfolio {
-        margin: 120px 0;
-
-        // Portfolio area uses a flex to allow the arrows and image to flow and re-size dynamically
-        .portfolio-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .portfolio-arrow {
-                flex-basis: 10%;
-
-                i {
-                    font-size: 3rem;
-                }
-            }
-
-            .portfolio-arrow-right {
-                text-align: right;
-            }
-
-            // The arrow left and arrow right are treated as buttons
-            button {
-                border: none;
-                color: rgba($color: $black, $alpha: 0.6);
-
-                &:hover,
-                &:focus {
-                    background-color: transparent;
-                    color: $black;
-                }
-            }
-
-            // Portfolio image and text underneath it
-            .portfolio-item {
-                flex-basis: 50%;
-
-                img {
-                    display: block;
-                    margin: 0 auto 60px auto;
-                    width: 50%;
-                    height: auto;
-                    border-radius: 50%;
-                }
-
-                p {
-                    text-align: center;
-                    font-style: italic;
-                }
-            }
-        } // .portfolio-wrapper end
-
-    } // .portfolio end
-
-    .services {
-        padding: 180px 0 80px 0;
-        background-image: url(../assets/home-4.jpeg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top right;
-
-        // Covers just the right-hand side (outside .wrapper), and inside the flexbox we have logo next to heading and description text
-        .services-wrapper {
-            margin-left: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-
-            .services-item {
-                margin-bottom: 40px;
-                flex-basis: 50%;
-                display: flex;
-                align-items: flex-start;
-
-
-                .services-logo {
-                    flex-basis: 18%;
-
-                    i {
-                        padding: 15px;
-                        font-size: 1.5rem;
-                        border-radius: 50%;
-                        border: 2px solid $black;
-                    }
-                }
-
-                .services-item-text {
-                    flex: 1 1 auto;
-                    padding: 0px 40px 40px 40px;
-                }
-            }
-        } // .services-wrapper end
-    } // .services end
-
-    .team {
-        padding: 120px 0;
-
-        h3 {
-            letter-spacing: 0.2rem;
+        h3,
+        p {
+            text-align: center;
         }
 
-        // Team images are presented alongside some textual elements in a flexbox
-        .team-wrapper {
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .branding-item {
+            flex-basis: 30%;
+        }
+    } // .branding-wrapper end
+} // .branding end
 
-            // Double-wide text element; stretched so the background aligns with the edges of the images
-            .team-text-wide {
-                align-self: stretch;
-                flex-basis: 49.5%;
-                padding-top: 10%;
-                padding-left: 40px;
-                padding-right: 40px;
-                background-color: $white-two;
+.portfolio {
+    margin: 120px 0;
+
+    // Portfolio area uses a flex to allow the arrows and image to flow and re-size dynamically
+    .portfolio-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .portfolio-arrow {
+            flex-basis: 10%;
+
+            i {
+                font-size: 3rem;
             }
+        }
 
-            .team-img {
-                flex-basis: 24%;
+        .portfolio-arrow-right {
+            text-align: right;
+        }
 
-                img {
-                    margin: 0 auto;
-                    width: 100%;
-                    height: auto;
-                }
+        // The arrow left and arrow right are treated as buttons
+        button {
+            border: none;
+            color: rgba($color: $black, $alpha: 0.6);
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $black;
             }
+        }
 
-            .team-text {
-                flex-basis: 24%;
-                padding: 0 20px;
-                text-align: center;
-            }
-        } // .team-wrapper end
+        // Portfolio image and text underneath it
+        .portfolio-item {
+            flex-basis: 50%;
 
-    } // .team end
-
-    .shop {
-        background-color: $light-sage;
-
-        // A simple flex containing a header, description, and button
-        .shop-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            .shop-item {
-                padding: 380px 200px;
-                flex-basis: 50%;
+            img {
+                display: block;
+                margin: 0 auto 60px auto;
+                width: 50%;
+                height: auto;
+                border-radius: 50%;
             }
 
             p {
-                margin-top: 40px;
-                margin-bottom: 70px;
+                text-align: center;
+                font-style: italic;
             }
+        }
+    } // .portfolio-wrapper end
 
-            // Have to style the button in a deep specificity because it only looks this way for this section
-            button {
-                border: none;
-                background-color: $white-two;
-                padding: 20px 50px;
-                font-size: 0.8rem;
-                font-weight: bold;
-                letter-spacing: 0.1rem;
+} // .portfolio end
 
-                &:hover,
-                &:focus {
-                    border: none;
-                    background-color: $black;
-                    color: $white-two;
+.services {
+    padding: 180px 0 80px 0;
+    background-image: url(../assets/home-4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    // Covers just the right-hand side (outside .wrapper), and inside the flexbox we have logo next to heading and description text
+    .services-wrapper {
+        margin-left: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .services-item {
+            margin-bottom: 40px;
+            flex-basis: 50%;
+            display: flex;
+            align-items: flex-start;
+
+
+            .services-logo {
+                flex-basis: 18%;
+
+                i {
+                    padding: 15px;
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+                    border: 2px solid $black;
                 }
             }
 
-            .shop-item-right {
-                align-self: stretch;
-                background-image: url(../assets/home-10.jpeg);
-                background-size: cover;
+            .services-item-text {
+                flex: 1 1 auto;
+                padding: 0px 40px 40px 40px;
             }
-        } // .shop-wrapper end
-    } // .shop end
-}
+        }
+    } // .services-wrapper end
+} // .services end
+
+.team {
+    padding: 120px 0;
+
+    h3 {
+        letter-spacing: 0.2rem;
+    }
+
+    // Team images are presented alongside some textual elements in a flexbox
+    .team-wrapper {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // Double-wide text element; stretched so the background aligns with the edges of the images
+        .team-text-wide {
+            align-self: stretch;
+            flex-basis: 49.5%;
+            padding-top: 10%;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: $white-two;
+        }
+
+        .team-img {
+            flex-basis: 24%;
+
+            img {
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .team-text {
+            flex-basis: 24%;
+            padding: 0 20px;
+            text-align: center;
+        }
+    } // .team-wrapper end
+
+} // .team end
+
+.shop {
+    background-color: $light-sage;
+
+    // A simple flex containing a header, description, and button
+    .shop-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .shop-item {
+            padding: 380px 200px;
+            flex-basis: 50%;
+        }
+
+        p {
+            margin-top: 40px;
+            margin-bottom: 70px;
+        }
+
+        // Have to style the button in a deep specificity because it only looks this way for this section
+        button {
+            border: none;
+            background-color: $white-two;
+            padding: 20px 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+
+            &:hover,
+            &:focus {
+                border: none;
+                background-color: $black;
+                color: $white-two;
+            }
+        }
+
+        .shop-item-right {
+            align-self: stretch;
+            background-image: url(../assets/home-10.jpeg);
+            background-size: cover;
+        }
+    } // .shop-wrapper end
+} // .shop end
+
 
 
 // Styling for BLOG page (blog.html)
