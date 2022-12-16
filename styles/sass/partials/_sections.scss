@@ -97,6 +97,8 @@
         button {
             border: none;
             color: rgba($color: $black, $alpha: 0.6);
+            position: relative;
+            z-index: 10;
 
             &:hover,
             &:focus {
@@ -109,12 +111,30 @@
         .portfolio-item {
             flex-basis: 50%;
 
+            // Set all images in the carousel to stack on top of each other using relative positioning
+            .carousel {
+                width: 100%;
+                height: 500px;
+                position: relative;
+                overflow: hidden;
+
+                .carousel-item {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transition: all 0.5s;
+                    z-index: 1;
+                }
+            }
+
             img {
                 display: block;
                 margin: 0 auto 60px auto;
-                width: 50%;
+                width: 75%;
+                max-width: 400px;
                 height: auto;
                 border-radius: 50%;
+                object-fit: cover;
             }
 
             p {
