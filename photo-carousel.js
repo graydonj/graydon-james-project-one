@@ -1,6 +1,6 @@
 // Grab all the photos in the carousel
 const carousel = document.querySelectorAll('.carousel-item');
-console.log(carousel);
+// console.log(carousel);
 
 // Put the images side-by-side. We do this using translateX for each carousel image
 carousel.forEach( function(imageItem, i) {
