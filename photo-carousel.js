@@ -38,38 +38,38 @@ function slideImages(carousel, currImage) {
 
     // if we go "off the edge" past the last image, reset to last image (bump and stop)
     if (currImage === carousel.length) {
-        console.log(currImage);
 
-        // bump the image, but because of how image bump works, we have to loop the whole bunch of images and for each image in the carousel...bump
-        carousel.forEach(function (imageItem, i) {
-            const imageItemStyle = imageItem.style;
-            imageItemStyle.transform = `translateX(${(i - currImage) * 100}%)`;
-            console.log(imageItemStyle.transform);
-        });
+        // grab the current image (and it's style object)
+        let imageElement = carousel.item(currImage - 1);
+        let imageElementStyle = imageElement.style;
 
-        // then reset each image
-        currImage = carousel.length - 1;
-        console.log(currImage);
+        // bump the image a bit to indicate we've hit the end
+        imageElementStyle.transform = `translateX(-50%)`;
+
+        // then reset
         setTimeout( () => {
-            carousel.forEach(function (imageItem, i) {
-                const imageItemStyle = imageItem.style;
-                imageItemStyle.transform = `translateX(${(i - currImage) * 100}%)`;
-                console.log(imageItemStyle.transform);
-            });
-        });
+            imageElementStyle.transform = `translateX(0%)`;
+        }, 100);
+
+        // and reset the currImage
+        currImage = carousel.length - 1;
+
     } else if (currImage === -1) {
 
-        // bump the image
-        carousel.forEach(function (imageItem, i) {
-            const imageItemStyle = imageItem.style;
-            imageItemStyle.transform = `translateX(${(i - currImage) * 50}%)`;
+        // reset the currImage (there is no index of -1)
+        currImage = 0;
 
-            // then reset
-            currImage = 0;
-            setTimeout(() => {
-                imageItemStyle.transform = `translateX(${(i - currImage) * 100}%)`;
-            }, 100);
-        });
+        // grab the current image (and it's style object)
+        let imageElement = carousel.item(currImage);
+        let imageElementStyle = imageElement.style;
+
+        // bump the image a bit to indicate we've hit the end
+        imageElementStyle.transform = `translateX(50%)`;
+
+        // then reset
+        setTimeout(() => {
+            imageElementStyle.transform = `translateX(0%)`;
+        }, 100);
     } else {
 
         // slide the image over
